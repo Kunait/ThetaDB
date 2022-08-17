@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.ManageMovieController">
+    <children>
+        <TableView fx:id="table" layoutX="40.0" layoutY="50.0" prefHeight="323.0" prefWidth="381.0">
+            <columns>
+                <TableColumn fx:id="filmidt" prefWidth="89.33331298828125" text="FilmID" />
+                <TableColumn fx:id="filmnamet" prefWidth="290.0" text="Filmname" />
+            </columns>
+        </TableView>
+        <Button fx:id="addMovie" layoutX="455.0" layoutY="25.0" mnemonicParsing="false" onAction="#addMoviePressed" prefHeight="25.0" prefWidth="123.0" text="Film hinzufügen" />
+        <Button fx:id="editMovie" layoutX="456.0" layoutY="78.0" mnemonicParsing="false" onAction="#editMoviePressed" prefHeight="25.0" prefWidth="123.0" text="Film bearbeiten" />
+        <Button disable="true" layoutX="456.0" layoutY="128.0" mnemonicParsing="false" text="Filme herunterladen" />
+        <Button fx:id="abmeldenButton" layoutX="455.0" layoutY="348.0" mnemonicParsing="false" onAction="#abmeldenButtonPressed" prefHeight="25.0" prefWidth="123.0" text="Abmelden" />
+        <Button fx:id="reportButton" layoutX="455.0" layoutY="175.0" mnemonicParsing="false" onAction="#reportButtonPressed" prefHeight="25.0" prefWidth="123.0" text="Reportübersicht" />
+      <SplitPane fx:id="replist" layoutX="40.0" layoutY="50.0" prefHeight="323.0" prefWidth="381.0" visible="false">
+         <items>
+            <TableView fx:id="retable" onMouseClicked="#dingsPressed" prefHeight="227.0" prefWidth="297.0">
+              <columns>
+                  <TableColumn fx:id="gelesen" prefWidth="50.0" text="Gelesen" />
+                <TableColumn fx:id="repname" prefWidth="134.0" text="Report" />
+                <TableColumn fx:id="reptxt" prefWidth="195.0" sortable="false" text="Vorschau Reporttext" />
+              </columns>
+            </TableView>
+         </items>
+      </SplitPane>
+      <Label fx:id="uptext" layoutX="40.0" layoutY="4.0" prefHeight="17.0" prefWidth="282.0" text="Filmübersicht">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="Moviestat" layoutX="456.0" layoutY="223.0" mnemonicParsing="false" onAction="#StatsMoviePressed" prefHeight="25.0" prefWidth="123.0" text="Filmstatistik" />
+    </children>
+</AnchorPane>

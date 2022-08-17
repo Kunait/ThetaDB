@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.EinladungSendController">
+    <children>
+        <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" layoutX="-1.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="802.0" />
+        <Text layoutX="606.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+        <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="579.0" layoutY="2.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+        <Text layoutX="721.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+        <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="704.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+        <Text fx:id="einladen" layoutX="23.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutzer einladen" underline="true" wrappingWidth="771.8418884277344">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Text>
+        <Text fx:id="filmtxt" layoutX="23.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Strange: In the Multiverse of madness" wrappingWidth="567.1752071380615">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Button fx:id="zuruck" layoutX="23.0" layoutY="530.0" minHeight="20.0" mnemonicParsing="false" onAction="#zurueck" prefHeight="25.0" prefWidth="200.0" text="Zurück">
+            <font>
+                <Font size="13.0" />
+            </font></Button>
+        <Button fx:id="fehler" layoutX="579.0" layoutY="530.0" minHeight="25.0" mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="200.0" text="Einladung verschicken">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+        <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <TextArea fx:id="reportFeld" layoutX="233.0" layoutY="378.0" prefHeight="150.0" prefWidth="334.0" />
+      <Text layoutX="324.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einladungstext(optional)" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="581.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Freunde">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ListView fx:id="freundesListeView" layoutX="579.0" layoutY="101.0" onMouseClicked="#getSelectedFriend" prefHeight="426.0" prefWidth="200.0" />
+      <ListView fx:id="eingeladenView" layoutX="22.0" layoutY="182.0" onMouseClicked="#getInvitedFriend" prefHeight="346.0" prefWidth="200.0" />
+      <Text layoutX="22.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eingeladene User">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="filmlangetxt" layoutX="24.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge: 2 Minuten" wrappingWidth="175.8418788909912">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="date" editable="false" layoutX="310.0" layoutY="261.0" prefHeight="17.0" prefWidth="177.0" promptText="Datum" />
+      <Spinner fx:id="hour" editable="true" layoutX="310.0" layoutY="314.0" prefHeight="25.0" prefWidth="79.0" />
+      <Spinner fx:id="minute" editable="true" layoutX="407.0" layoutY="314.0" prefHeight="25.0" prefWidth="79.0" />
+      <Text layoutX="375.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uhrzeit" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="396.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="errortxt" fill="#d90000" layoutX="308.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="175.8418788909912">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

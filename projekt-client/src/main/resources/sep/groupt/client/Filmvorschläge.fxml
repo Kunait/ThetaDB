@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="750.0" maxWidth="1000.0" minHeight="750.0" minWidth="1000.0" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.FilmvorschlaegeController">
+   <children>
+      <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="1000.0" />
+      <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <Text layoutX="800.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+      <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="770.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+      <Text layoutX="925.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+      <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="900.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+      <Text layoutX="5.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmvorschläge">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <ToggleButton fx:id="ich" layoutX="5.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#ichClicked" text="auf Basis von meinen Filmen">
+         <toggleGroup>
+            <ToggleGroup fx:id="gruppe" />
+         </toggleGroup></ToggleButton>
+      <ToggleButton fx:id="freunde" layoutX="168.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#freundClicked" text="auf Basis von Filmen meiner Freunde" toggleGroup="$gruppe" />
+      <TableView fx:id="tabelle" layoutX="4.0" layoutY="208.0" onMouseClicked="#pressed" onMousePressed="#pressed" prefHeight="385.0" prefWidth="991.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="305.5999970436096" text="Name" />
+            <TableColumn fx:id="kategorieColumn" prefWidth="255.19998168945312" text="Kategorie" />
+            <TableColumn fx:id="castColumn" prefWidth="284.0" text="Cast" />
+            <TableColumn fx:id="dateColumn" prefWidth="144.80010986328125" text="Datum" />
+         </columns>
+      </TableView>
+      <Button fx:id="zurueck" layoutX="4.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#zurueckClicked" text="Zurück" />
+   </children>
+</AnchorPane>

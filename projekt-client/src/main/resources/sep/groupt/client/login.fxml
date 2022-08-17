@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.LoginController">
+   <children>
+      <Label layoutX="230.0" layoutY="15.0" text="ThetaDB">
+         <font>
+            <Font name="Century Gothic Bold" size="34.0" />
+         </font></Label>
+      <Text layoutX="226.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <TextField fx:id="emailFeld" layoutX="226.0" layoutY="100.0" onKeyPressed="#handleEnter" promptText="E-Mail Adresse" />
+      <Text layoutX="226.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwort" />
+      <PasswordField fx:id="passwortFeld" layoutX="226.0" layoutY="160.0" onKeyPressed="#handleEnter" promptText="Passwort" />
+      <Text fx:id="sicherheitsCodeText" layoutX="226.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sicherheitscode" />
+      <TextField fx:id="authCodeFeld" layoutX="226.0" layoutY="220.0" promptText="Sicherheitscode" />
+      <Text fx:id="authCodeWarning" fill="RED" layoutX="390.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="warning" fill="RED" layoutX="226.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="anmeldenButton" layoutX="226.0" layoutY="310.0" mnemonicParsing="false" onAction="#anmeldenButtonPressed" prefHeight="25.0" prefWidth="149.0" text="Anmelden" />
+      <Button fx:id="registerAdminButton" layoutX="410.0" layoutY="310.0" mnemonicParsing="false" onAction="#registerAdminButtonPressed" prefHeight="25.0" prefWidth="149.0" text="Registrieren als Admin" />
+      <Button fx:id="registerNutzerButton" layoutX="410.0" layoutY="348.0" mnemonicParsing="false" onAction="#registerNutzerButtonPressed" prefHeight="25.0" prefWidth="149.0" text="Registrieren als Nutzer" />
+      <Button fx:id="anmeldenAlsAdmin" layoutX="226.0" layoutY="348.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Anmelden als Admin" />
+   </children>
+</AnchorPane>

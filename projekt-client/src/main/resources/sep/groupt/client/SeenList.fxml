@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.SeenListController">
+   <children>
+      <TableView fx:id="Table" layoutX="20.0" layoutY="65.0" onMouseClicked="#FilmWahl" prefHeight="362.0" prefWidth="279.0">
+        <columns>
+          <TableColumn fx:id="filmcolumn" prefWidth="75.0" text="Film" />
+          <TableColumn fx:id="datecolumn" prefWidth="124.66668701171875" text="Erscheinungsdatum" />
+            <TableColumn fx:id="authorcolumn" prefWidth="77.33333333333331" text="Author" />
+        </columns>
+      </TableView>
+      <Button fx:id="ConfirmChanges" layoutX="388.0" layoutY="65.0" mnemonicParsing="false" onAction="#ConfirmChangesPressed" text="Bewertung ändern" />
+      <TextArea fx:id="Rezensionfeld" layoutX="348.0" layoutY="227.0" prefHeight="200.0" prefWidth="200.0" />
+      <Text layoutX="391.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rezension (optional)" />
+      <MenuButton fx:id="Sterne" layoutX="386.0" layoutY="166.0" mnemonicParsing="false" text="Sternbewertung">
+        <items>
+          <MenuItem fx:id="einstern" mnemonicParsing="false" onAction="#addOneStar" text="1 Stern" />
+          <MenuItem fx:id="zweistern" mnemonicParsing="false" onAction="#addTwoStar" text="2 Sterne" />
+            <MenuItem fx:id="dreistern" mnemonicParsing="false" onAction="#addThreeStar" text="3 Sterne" />
+            <MenuItem fx:id="vierstern" mnemonicParsing="false" onAction="#addFourStar" text="4 Sterne" />
+            <MenuItem fx:id="fünfstern" mnemonicParsing="false" onAction="#addFiveStar" text="5 Sterne" />
+            <MenuItem mnemonicParsing="false" onAction="#addZero" text="Keine Bewertung" />
+        </items>
+      </MenuButton>
+      <Button fx:id="filmdaten" layoutX="383.0" layoutY="115.0" mnemonicParsing="false" onAction="#FilmdatenPressed" prefHeight="25.0" prefWidth="129.0" text="Filmdaten anzeigen" />
+      <Button fx:id="Back" layoutX="521.0" layoutY="166.0" mnemonicParsing="false" onAction="#BackPressed" text="Abbrechen" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5283ff" height="50.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Circle fx:id="profilBild" fill="WHITE" layoutX="33.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="521.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+      <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="500.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+      <Text layoutX="398.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+      <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="369.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+      <Text fx:id="welcomeMessage" layoutX="65.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+   </children>
+</AnchorPane>

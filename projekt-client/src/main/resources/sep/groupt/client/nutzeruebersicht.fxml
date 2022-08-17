@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="750.0" maxWidth="1000.0" minHeight="750.0" minWidth="1000.0" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.nutzerUebersichtController">
+   <children>
+      <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="1000.0" />
+      <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <TextField fx:id="searchBar" blendMode="SRC_ATOP" cache="true" layoutX="340.0" layoutY="15.0" prefHeight="25.0" prefWidth="260.0" promptText="Suche" style="-fx-background-color: white;" AnchorPane.topAnchor="15.0" />
+      <Text layoutX="800.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+      <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="770.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+      <Text layoutX="925.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+      <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="900.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+      <Text layoutX="35.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Freunde">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ListView fx:id="freundesListeView" layoutX="30.0" layoutY="466.0" onMouseClicked="#getSelectedFriend" prefHeight="245.0" prefWidth="200.0" />
+      <Text layoutX="470.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Watchlist" />
+      <ListView fx:id="watchListeView" layoutX="470.0" layoutY="159.0" maxHeight="250.0" maxWidth="480.0" minHeight="250.0" minWidth="480.0" onMouseClicked="#getSelectedFilmFromWatchlist" orientation="HORIZONTAL" prefHeight="250.0" prefWidth="480.0" style="-fx-background-color: WHITE;" />
+      <Text layoutX="470.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gesehene Filme" />
+      <ListView fx:id="seenListeView" layoutX="470.0" layoutY="466.0" maxHeight="250.0" maxWidth="480.0" minHeight="250.0" minWidth="480.0" onMouseClicked="#getSelectedFilmFromSeenlist" orientation="HORIZONTAL" prefHeight="250.0" prefWidth="480.0" />
+      <Button layoutX="530.0" layoutY="126.0" mnemonicParsing="false" onAction="#WatchlistPressed" text="mehr ansehen" />
+      <Button layoutX="564.0" layoutY="433.0" mnemonicParsing="false" onAction="#SeenlistPressed" text="mehr ansehen" />
+      <Button fx:id="suche" layoutX="600.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#sucheClicked" text="Suche" />
+      <Text layoutX="30.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deine Informationen:" />
+      <Text layoutX="210.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:" />
+      <Text layoutX="210.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vorname:" />
+      <Text layoutX="210.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nachname:" />
+      <ImageView fx:id="profilBildGross" fitHeight="150.0" fitWidth="150.0" layoutX="30.0" layoutY="155.0" onMouseClicked="#profilBildClicked" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="userEmailText" layoutX="260.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="userVornameText" layoutX="271.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="userNachnameText" layoutX="282.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ChoiceBox fx:id="choiceBox" layoutX="260.0" layoutY="15.0" prefHeight="25.0" prefWidth="80.0" />
+      <Rectangle fx:id="bell" arcHeight="5.0" arcWidth="5.0" fill="#507fff" height="40.0" layoutX="683.0" layoutY="5.0" onMouseClicked="#bellClicked" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle fx:id="bell2" arcHeight="5.0" arcWidth="5.0" fill="#507fff" height="40.0" layoutX="730.0" layoutY="5.0" onMouseClicked="#bell2Clicked" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Button fx:id="nutzerstatistik" layoutX="784.0" layoutY="83.0" mnemonicParsing="false" onAction="#statsWeiterleiten" text="Nutzerstatistik" />
+      <Button fx:id="filmvorschlaege" layoutX="34.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#filmvorschlägePressed" text="Filmvorschläge" />
+      <Button fx:id="diskussionen" layoutX="124.0" layoutY="433.0" mnemonicParsing="false" onAction="#diskussionClicked" text="Diskussionen" />
+      <Text fx:id="einladungresp" layoutX="470.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

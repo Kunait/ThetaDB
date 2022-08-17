@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.ReportViewController">
+   <children>
+      <Text fx:id="uptxt" layoutX="-1.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Fehler vom 01.01.2001" textAlignment="CENTER" wrappingWidth="600.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="120.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" text="Cast" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" text="Drehbuch" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" text="Regie" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" text="Releasedatum" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE" text="Filmlänge" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" text="Kategorien" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" text="Filmname" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text fx:id="filmcast" layoutX="230.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmdrehbuch" layoutX="230.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmregie" layoutX="230.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmdatum" layoutX="230.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmlaenge" layoutX="230.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmkategorie" layoutX="230.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmname" layoutX="230.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <TextArea fx:id="reportFeld" editable="false" layoutX="142.0" layoutY="223.0" prefHeight="112.0" prefWidth="334.0" promptText="Kein Bericht angegeben" />
+      <Text layoutX="269.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fehlerbericht" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="zumFilm" layoutX="309.0" layoutY="335.0" mnemonicParsing="false" onAction="#zumFilmPressed" prefHeight="29.0" prefWidth="167.0" text="Zum Film">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="142.0" layoutY="335.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="29.0" prefWidth="167.0" text="Zurück">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="readBox" layoutX="485.0" layoutY="317.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="112.0" text="Als gelesen markieren " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

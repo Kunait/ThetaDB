@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.ProfilAnzeigenController">
+   <children>
+      <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="1000.0" />
+      <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="770.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+      <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="900.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+      <Button fx:id="backButton" layoutX="34.0" layoutY="698.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+      <ImageView fx:id="userBild" fitHeight="150.0" fitWidth="150.0" layoutX="627.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="userName" layoutX="626.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="emailField" layoutX="625.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ListView fx:id="friendlist" layoutX="30.0" layoutY="139.0" onMouseClicked="#friendListClicked" prefHeight="150.0" prefWidth="211.0" />
+      <ListView fx:id="watchlist" layoutX="30.0" layoutY="355.0" onMouseClicked="#getSelectedFilmFromWatchlist" prefHeight="330.0" prefWidth="211.0" />
+      <Text fx:id="friendlisttxt" layoutX="34.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Freundesliste">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="watchlisttxt" layoutX="34.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Watchlist">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ListView fx:id="seenlist" layoutX="277.0" layoutY="123.0" onMouseClicked="#getSelectedFilmFromSeenlist" prefHeight="238.0" prefWidth="211.0" />
+      <Text fx:id="seenlisttxt" layoutX="277.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gesehene Filme">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="addAsFriend" layoutX="652.0" layoutY="708.0" mnemonicParsing="false" onAction="#addAsFriendClicked" text="Als Freund hinzufügen" />
+   </children>
+</AnchorPane>

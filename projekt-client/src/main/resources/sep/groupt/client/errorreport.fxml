@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.ReportAddController">
+   <children>
+      <Text layoutX="120.0" layoutY="189.0" stroke="BLACK" strokeType="INSIDE" text="Cast" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" text="Drehbuch" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" text="Regie" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" text="Releasedatum" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" text="Filmlänge" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" text="Kategorien" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text layoutX="120.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" text="Filmname" textAlignment="RIGHT" wrappingWidth="96.78384399414062" />
+      <Text fx:id="filmcast" layoutX="230.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmdrehbuch" layoutX="230.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmregie" layoutX="230.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmdatum" layoutX="230.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmlaenge" layoutX="230.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmkategorie" layoutX="230.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <Text fx:id="filmname" layoutX="230.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.1171569824219" />
+      <TextArea fx:id="reportFeld" layoutX="142.0" layoutY="231.0" prefHeight="112.0" prefWidth="334.0" promptText="Bitte beschreibe das Problem etwas genauer" />
+      <Text layoutX="239.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fehlerbericht(optional)" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="ConfirmButton" layoutX="309.0" layoutY="343.0" mnemonicParsing="false" onAction="#ConfirmButtonPressed" prefHeight="29.0" prefWidth="167.0" text="Report senden">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="142.0" layoutY="343.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="29.0" prefWidth="167.0" text="Abbrechen">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5283ff" height="50.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Text fx:id="uptxt" layoutX="-1.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fehler melden" textAlignment="CENTER" visible="false" wrappingWidth="600.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Circle fx:id="profilBild" fill="WHITE" layoutX="37.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="525.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+      <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="504.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+      <Text layoutX="402.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+      <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="373.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+      <Text fx:id="welcomeMessage" layoutX="69.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+   </children>
+</AnchorPane>

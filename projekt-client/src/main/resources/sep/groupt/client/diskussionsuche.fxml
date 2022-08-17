@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.SearchDiskussionController">
+   <children>
+      <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="1000.0" />
+      <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <TextField fx:id="searchBar" blendMode="SRC_ATOP" cache="true" layoutX="340.0" layoutY="15.0" prefHeight="25.0" prefWidth="260.0" promptText="Suche" style="-fx-background-color: white;" />
+      <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="770.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+      <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="900.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+      <Button fx:id="suche" layoutX="600.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#sucheClicked" text="Suche" />
+      <ListView fx:id="resultsList" layoutX="30.0" layoutY="75.0" prefHeight="593.0" prefWidth="300.0" />
+      <Button fx:id="backButton" layoutX="340.0" layoutY="601.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+      <Text fx:id="userName" layoutX="626.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="emailField" layoutX="625.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="800.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+      <Text layoutX="923.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+      <Button fx:id="create" layoutX="651.0" layoutY="305.0" mnemonicParsing="false" onAction="#create" text="Diskussionsgruppe erstellen" />
+      <TextField fx:id="name" layoutX="651.0" layoutY="166.0" promptText="Name" />
+      <CheckBox fx:id="privatBox" layoutX="651.0" layoutY="234.0" mnemonicParsing="false" text="Privat" />
+      <Button fx:id="join" layoutX="340.0" layoutY="635.0" mnemonicParsing="false" onAction="#joinPressed" text="Diskussionsgruppe beitreten" />
+   </children>
+</AnchorPane>

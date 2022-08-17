@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.FilmSuchenController">
+    <children>
+        <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" layoutX="-1.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="802.0" />
+        <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+        <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+        <Text layoutX="606.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+        <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="579.0" layoutY="2.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+        <Text layoutX="721.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+        <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="704.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+        <TableView fx:id="tabelle" layoutX="14.0" layoutY="110.0" onMouseClicked="#pressed" onMousePressed="#pressed" prefHeight="442.0" prefWidth="783.0">
+            <columns>
+                <TableColumn fx:id="bannerColumn" prefWidth="96.7999906539917" />
+                <TableColumn fx:id="nameColumn" prefWidth="191.1999969482422" text="Name" />
+                <TableColumn fx:id="kategorieColumn" prefWidth="157.5999755859375" text="Kategorie" />
+                <TableColumn fx:id="castColumn" prefWidth="217.5999755859375" text="Cast" />
+                <TableColumn fx:id="dateColumn" prefWidth="122.40008544921875" text="Datum" />
+            </columns>
+        </TableView>
+        <DatePicker fx:id="bis" editable="false" layoutX="738.0" layoutY="86.0" prefHeight="26.0" prefWidth="58.0" promptText="bis" />
+        <Text layoutX="11.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="erweiterte Suche" wrappingWidth="220.53668212890625">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+        <Button fx:id="suchen" layoutX="34.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#suchenClicked" prefHeight="26.0" prefWidth="58.0" text="Suchen" />
+        <Button fx:id="zurueck" layoutX="11.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#zurueckClicked" text="Zurück" />
+        <TextField fx:id="name" layoutX="113.0" layoutY="86.0" prefHeight="26.0" prefWidth="194.0" promptText="Name" />
+        <MenuButton fx:id="kategorie" layoutX="303.0" layoutY="86.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" text="Kategorie">
+            <items>
+                <CheckMenuItem fx:id="adventurebox" mnemonicParsing="false" text="Abenteuer" />
+                <CheckMenuItem fx:id="actionbox" mnemonicParsing="false" text="Action" />
+                <CheckMenuItem fx:id="animationbox" mnemonicParsing="false" text="Animation" />
+                <CheckMenuItem fx:id="dokumentationbox" mnemonicParsing="false" text="Dokumentation" />
+                <CheckMenuItem fx:id="dramabox" mnemonicParsing="false" text="Drama" />
+                <CheckMenuItem fx:id="fantasybox" mnemonicParsing="false" text="Fantasy" />
+                <CheckMenuItem fx:id="horrorbox" mnemonicParsing="false" text="Horror" />
+                <CheckMenuItem fx:id="comedybox" mnemonicParsing="false" text="Komödie" />
+                <CheckMenuItem fx:id="krimibox" mnemonicParsing="false" text="Krimi" />
+                <CheckMenuItem fx:id="lovebox" mnemonicParsing="false" text="Liebesfilm" />
+                <CheckMenuItem fx:id="musicbox" mnemonicParsing="false" text="Musik" />
+                <CheckMenuItem fx:id="scbox" mnemonicParsing="false" text="Science-Fiction" />
+                <CheckMenuItem fx:id="thrillerbox" mnemonicParsing="false" text="Thriller" />
+                <CheckMenuItem fx:id="westernbox" mnemonicParsing="false" text="Western" />
+                <CheckMenuItem fx:id="sonstigesbox" mnemonicParsing="false" text="Sonstiges" />
+            </items>
+        </MenuButton>
+        <TextField fx:id="cast" layoutX="461.0" layoutY="85.0" prefHeight="26.0" prefWidth="214.0" promptText="Cast" />
+        <DatePicker fx:id="von" editable="false" layoutX="676.0" layoutY="86.0" prefHeight="25.0" prefWidth="65.0" promptText="von" />
+    </children>
+</AnchorPane>

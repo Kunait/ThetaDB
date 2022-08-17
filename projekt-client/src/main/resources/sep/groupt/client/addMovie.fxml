@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.AddMovieController">
+    <children>
+        <Text layoutX="185.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Film hinzufügen" textAlignment="JUSTIFY">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+        <TextField fx:id="name" layoutX="169.0" layoutY="77.0" prefHeight="25.0" prefWidth="175.0" promptText="Filmname" />
+        <TextField fx:id="fl" layoutX="168.0" layoutY="147.0" prefHeight="25.0" prefWidth="175.0" promptText="Filmlänge in Minuten" />
+        <TextField fx:id="regi" layoutX="169.0" layoutY="214.0" prefHeight="25.0" prefWidth="175.0" promptText="Regisseur" />
+        <TextField fx:id="cast" layoutX="169.0" layoutY="247.0" prefHeight="25.0" prefWidth="175.0" promptText="Cast" />
+        <TextField fx:id="da" layoutX="169.0" layoutY="282.0" prefHeight="25.0" prefWidth="175.0" promptText="Drehbuchautor" />
+        <Button fx:id="addFilm" layoutX="169.0" layoutY="351.0" mnemonicParsing="false" onAction="#addFilmPressed" prefHeight="25.0" prefWidth="175.0" text="Film hinzufügen" />
+        <Text fx:id="warning" fill="RED" layoutX="360.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+        <Text fx:id="best" fill="#22ff00" layoutX="360.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+        <Button fx:id="AbbrechenButton" layoutX="61.0" layoutY="351.0" mnemonicParsing="false" onAction="#returnPressed" text="Abbrechen" />
+        <DatePicker fx:id="release" editable="false" layoutX="169.0" layoutY="179.0" promptText="Erscheinungsdatum" />
+        <MenuButton fx:id="kategoriemenu" accessibleRole="CHECK_MENU_ITEM" layoutX="169.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Kategorie">
+            <items>
+                <CheckMenuItem fx:id="adventurebox" mnemonicParsing="false" text="Abenteuer" />
+                <CheckMenuItem fx:id="actionbox" mnemonicParsing="false" text="Action" />
+                <CheckMenuItem fx:id="animationbox" mnemonicParsing="false" text="Animation" />
+                <CheckMenuItem fx:id="dokumentationbox" mnemonicParsing="false" text="Dokumentation" />
+                <CheckMenuItem fx:id="dramabox" mnemonicParsing="false" text="Drama" />
+                <CheckMenuItem fx:id="sonstigesbox" mnemonicParsing="false" text="Sonstiges" />
+                <CheckMenuItem fx:id="fantasybox" mnemonicParsing="false" text="Fantasy" />
+                <CheckMenuItem fx:id="horrorbox" mnemonicParsing="false" text="Horror" />
+                <CheckMenuItem fx:id="comedybox" mnemonicParsing="false" text="Komödie" />
+                <CheckMenuItem fx:id="krimibox" mnemonicParsing="false" text="Krimi" />
+                <CheckMenuItem fx:id="lovebox" mnemonicParsing="false" text="Liebesfilm" />
+                <CheckMenuItem fx:id="musicbox" mnemonicParsing="false" text="Musik" />
+                <CheckMenuItem fx:id="scbox" mnemonicParsing="false" text="Science-Fiction" />
+                <CheckMenuItem fx:id="thrillerbox" mnemonicParsing="false" text="Thriller" />
+                <CheckMenuItem fx:id="westernbox" mnemonicParsing="false" text="Western" />
+            </items>
+        </MenuButton>
+        <Button fx:id="banner" layoutX="169.0" layoutY="315.0" mnemonicParsing="false" onAction="#bannerPressed" prefHeight="25.0" prefWidth="175.0" text="(Optional) Banner hochladen" />
+        <Text fx:id="best1" fill="RED" layoutX="360.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+        <Text fx:id="best2" fill="RED" layoutX="360.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+        <Text fx:id="best3" fill="RED" layoutX="360.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="10.0" />
+            </font></Text>
+        <Text fx:id="best4" fill="RED" layoutX="360.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="10.0" />
+            </font></Text>
+        <Text fx:id="best5" fill="RED" layoutX="360.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="10.0" />
+            </font></Text>
+        <Text fx:id="best6" fill="RED" layoutX="360.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="10.0" />
+            </font></Text>
+        <Text fx:id="best7" fill="RED" layoutX="360.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="10.0" />
+            </font></Text>
+        <Text layoutX="98.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmname" />
+        <Text layoutX="98.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorie" />
+        <Text layoutX="97.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge" />
+        <Text layoutX="46.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erscheinungsdatum" />
+        <Text layoutX="98.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regisseur" />
+        <Text layoutX="124.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast" />
+        <Text layoutX="76.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drehbuchautor" />
+        <ImageView fx:id="imageView" fitHeight="225.0" fitWidth="150.0" layoutX="397.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.FilmansichtController">
+    <children>
+        <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" layoutX="-1.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="802.0" />
+        <Text layoutX="606.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+        <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="579.0" layoutY="2.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+        <Text layoutX="721.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+        <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="704.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+        <Text fx:id="titel" layoutX="15.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Strange in the Multiverse of Madness" wrappingWidth="400.50860595703125">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Text>
+        <Text fx:id="kategorie" layoutX="120.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorie: Action, Abenteuer, Fantasy">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text fx:id="regisseur" layoutX="120.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ressiseur: Sam Raimi">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text fx:id="drehbuchautor" layoutX="158.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drehbuchautor: Michael Waldron" wrappingWidth="373.49688720703125">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text fx:id="cast" layoutX="75.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast: Benedict Cumberbatch, Elizabeth Olsen, Chiwetel Ejiofor, Benedict Wong" wrappingWidth="427.93719482421875">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text fx:id="erscheinungsdatum" layoutX="197.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erscheinnungsdatum: 02.05.2022">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text fx:id="filmlaenge" layoutX="120.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge: 126">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Button fx:id="zurueck" layoutX="14.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#zurueckClicked" text="Zurück">
+            <font>
+                <Font size="16.0" />
+            </font></Button>
+        <Button fx:id="bewertung" layoutX="564.0" layoutY="405.0" mnemonicParsing="false" onAction="#bewertungClicked" prefHeight="102.0" prefWidth="222.0" text="Bewertungen ansehen">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Button>
+        <Text layoutX="15.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorie:">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text layoutX="15.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ressiseur:">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text layoutX="15.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drehbuchautor:">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text layoutX="15.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast:">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text layoutX="15.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erscheinungsdatum:">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <Text layoutX="15.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge:">
+            <font>
+                <Font size="18.0" />
+            </font></Text>
+        <ImageView fx:id="imageView" fitHeight="330.0" fitWidth="220.0" layoutX="564.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="watchlist" layoutX="563.0" layoutY="522.0" mnemonicParsing="false" onAction="#watchlistClicked" prefHeight="30.0" prefWidth="222.0" text="add to Watchlist">
+            <font>
+                <Font size="14.0" />
+            </font></Button>
+        <Button fx:id="fehler" layoutX="707.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#fehlerClicked" prefHeight="26.0" prefWidth="76.0" text="Fehler melden">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Button>
+        <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+        <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <Button fx:id="einladenButton" layoutX="563.0" layoutY="561.0" mnemonicParsing="false" onAction="#einladenButtonPressed" prefHeight="26.0" prefWidth="136.0" text="Freunde einladen" />
+    </children>
+</AnchorPane>

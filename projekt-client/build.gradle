@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.gretty' version '4.0.1'
+    id 'application'
+}
+
+group 'sep.groupt'
+version '0.0.1'
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+mainClassName = 'sep.groupt.client.Launcher'
+
+application {
+    mainClass = mainClassName;
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'net.sourceforge.htmlunit:htmlunit:2.63.0'
+    implementation 'commons-validator:commons-validator:1.7'
+
+
+    runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:win"
+}
+
+javafx {
+    version = '17.0.1'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    duplicatesStrategy = 'warn'
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

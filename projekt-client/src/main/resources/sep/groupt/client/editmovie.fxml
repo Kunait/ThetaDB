@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.editMovieController">
+   <children>
+      <TextField fx:id="NameFeld" layoutX="184.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" promptText="Filmname" />
+      <Text fx:id="editText" layoutX="185.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmdaten Bearbeiten">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="LaengeFeld" layoutX="184.0" layoutY="152.0" prefWidth="200.0" promptText="Filmlänge" />
+      <TextField fx:id="RegisseurFeld" layoutX="184.0" layoutY="208.0" prefWidth="200.0" promptText="Regisseur" />
+      <TextField fx:id="DrehbuchautorFeld" layoutX="184.0" layoutY="289.0" prefWidth="200.0" promptText="Drehbuchautor" />
+      <Button fx:id="ConfirmButton" layoutX="184.0" layoutY="347.0" mnemonicParsing="false" onAction="#ConfirmButtonPressed" prefHeight="25.0" prefWidth="200.0" text="Änderungen übernehmen" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="AbbrechenButton" layoutX="81.0" layoutY="347.0" mnemonicParsing="false" onAction="#AbbrechenButtonPressed" prefHeight="25.0" prefWidth="75.0" text="Abbrechen" />
+      <Text fx:id="msgtext" fill="RED" layoutX="401.0" layoutY="110.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="149.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="nametxt" fill="#6f6f6f" layoutX="14.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmname" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="genretxt" fill="#6f6f6f" layoutX="14.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorie" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="lengthtxt" fill="#6f6f6f" layoutX="14.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="datetxt" fill="#6f6f6f" layoutX="14.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Releasedatum" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="regietxt" fill="#6f6f6f" layoutX="14.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regisseur" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="casttxt" fill="#6f6f6f" layoutX="14.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="casttxt1" fill="#6f6f6f" layoutX="14.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drehbuchautor" textAlignment="RIGHT" wrappingWidth="160.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="CastFeld" layoutX="184.0" layoutY="236.0" prefHeight="50.0" prefRowCount="2" prefWidth="200.0" promptText="Cast" wrapText="true" />
+      <Button fx:id="bannerButton" layoutX="184.0" layoutY="318.0" mnemonicParsing="false" onAction="#bannerButtonPressed" prefWidth="200.0" text="Banner" />
+      <MenuButton fx:id="kategoriemenu" layoutX="184.0" layoutY="124.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Kategorie">
+        <items>
+            <CheckMenuItem fx:id="adventurebox" mnemonicParsing="false" text="Abenteuer" />
+            <CheckMenuItem fx:id="actionbox" mnemonicParsing="false" text="Action" />
+            <CheckMenuItem fx:id="animationbox" mnemonicParsing="false" text="Animation" />
+            <CheckMenuItem fx:id="dokumentationbox" mnemonicParsing="false" text="Dokumentation" />
+            <CheckMenuItem fx:id="dramabox" mnemonicParsing="false" text="Drama" />
+            <CheckMenuItem fx:id="fantasybox" mnemonicParsing="false" text="Fantasy" />
+            <CheckMenuItem fx:id="horrorbox" mnemonicParsing="false" text="Horror" />
+            <CheckMenuItem fx:id="comedybox" mnemonicParsing="false" text="Komödie" />
+            <CheckMenuItem fx:id="krimibox" mnemonicParsing="false" text="Krimi" />
+            <CheckMenuItem fx:id="lovebox" mnemonicParsing="false" text="Liebesfilm" />
+            <CheckMenuItem fx:id="musicbox" mnemonicParsing="false" text="Musik" />
+            <CheckMenuItem fx:id="scbox" mnemonicParsing="false" text="Science-Fiction" />
+            <CheckMenuItem fx:id="thrillerbox" mnemonicParsing="false" text="Thriller" />
+            <CheckMenuItem fx:id="westernbox" mnemonicParsing="false" text="Western" />
+            <CheckMenuItem fx:id="sonstigesbox" mnemonicParsing="false" text="Sonstiges" />
+        </items>
+      </MenuButton>
+      <DatePicker fx:id="ErscheinungsdatumFeld" editable="false" layoutX="183.0" layoutY="180.0" prefHeight="25.0" prefWidth="200.0" promptText="Erscheinungsdatum" />
+      <ImageView fx:id="imageView" fitHeight="225.0" fitWidth="150.0" layoutX="417.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

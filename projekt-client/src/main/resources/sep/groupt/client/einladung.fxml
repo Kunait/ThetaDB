@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sep.groupt.client.EinladungViewController">
+    <children>
+        <Rectangle blendMode="DARKEN" fill="#507fff" height="50.0" layoutX="-1.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" width="802.0" />
+        <Text layoutX="606.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen" />
+        <Rectangle fx:id="einstellungenBox" fill="#1f93ff00" height="50.0" layoutX="579.0" layoutY="2.0" onMouseClicked="#einstellungenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+        <Text layoutX="721.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abmelden" />
+        <Rectangle fx:id="abmeldenBox" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="704.0" onMouseClicked="#abmeldenBoxPressed" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="96.0" />
+        <Text fx:id="einladen" layoutX="23.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du wurdest eingeladen!" textAlignment="CENTER" underline="true" wrappingWidth="771.8418884277344">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Text>
+        <Text fx:id="film" layoutX="23.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Strange: In the Multiverse of madness" textAlignment="CENTER" wrappingWidth="771.8418884277344">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Button fx:id="ablehnen" layoutX="200.0" layoutY="419.0" minHeight="20.0" mnemonicParsing="false" onAction="#ablehnenClicked" prefHeight="25.0" prefWidth="160.0" text="Einladung ablehnen">
+            <font>
+                <Font size="13.0" />
+            </font></Button>
+        <Button fx:id="annehmen" layoutX="440.0" layoutY="419.0" minHeight="25.0" mnemonicParsing="false" onAction="#acceptClicked" prefHeight="25.0" prefWidth="160.0" text="Einladung annehmen">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Circle fx:id="profilBild" fill="WHITE" layoutX="30.0" layoutY="25.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+        <Text fx:id="welcomeMessage" layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo User" />
+      <Text layoutX="355.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einladungstext" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="length" layoutX="244.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge: 2 Minuten" wrappingWidth="210.50856018066395">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="date" layoutX="244.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zeit: 12.12.2012 um 12:12" wrappingWidth="210.50856018066395">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="username" layoutX="244.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Von: Vor Name" wrappingWidth="210.50856018066395">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="text" layoutX="299.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="210.50856018066384" />
+    </children>
+</AnchorPane>
